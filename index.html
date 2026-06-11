@@ -8,7 +8,7 @@
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-body { font-family: 'Inter', sans-serif; background: #080F18; color: #fff; overflow-x: hidden; }
+body { font-family: 'Inter', sans-serif; background: #071428; color: #fff; overflow-x: hidden; }
 
 /* ── NAV ── */
 nav {
@@ -19,7 +19,7 @@ nav {
   transition: background .3s, border-color .3s;
 }
 nav.scrolled {
-  background: rgba(8,15,24,.92);
+  background: rgba(7,20,40,.94);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(255,255,255,.07);
 }
@@ -58,10 +58,10 @@ nav.scrolled {
   position: absolute; inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(8,15,24,.35) 0%,
-    rgba(8,15,24,.15) 40%,
-    rgba(8,15,24,.55) 75%,
-    rgba(8,15,24,.92) 100%
+    rgba(7,20,40,.35) 0%,
+    rgba(7,20,40,.15) 40%,
+    rgba(7,20,40,.60) 75%,
+    rgba(7,20,40,.97) 100%
   );
 }
 .hero-content { position: relative; z-index: 1; max-width: 820px; }
@@ -126,18 +126,20 @@ nav.scrolled {
 /* ── SECTIONS ── */
 .s { padding: 96px 56px; }
 .s-center { text-align: center; }
-.s-dark { background: #080F18; }
-.s-darker { background: #04090F; }
+.s-dark { background: #071428; }
+.s-darker { background: #040E20; }
+.s-navy { background: #071428; }
 .s-blue { background: #1A5EA8; }
-.s-light { background: #fff; color: #080F18; }
-.s-gray { background: #F5F7FA; color: #080F18; }
+.s-light { background: #fff; color: #0B1F3A; }
+.s-gray { background: #EEF4FF; color: #0B1F3A; }
+.s-lightblue { background: #EEF4FF; color: #0B1F3A; }
 
 .eyebrow {
   font-size: 10px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase;
   color: #5B9FE8; margin-bottom: 14px;
 }
-.s-blue .eyebrow { color: rgba(255,255,255,.6); }
-.s-light .eyebrow, .s-gray .eyebrow { color: #1A5EA8; }
+.s-blue .eyebrow, .s-navy .eyebrow { color: rgba(255,255,255,.6); }
+.s-light .eyebrow, .s-gray .eyebrow, .s-lightblue .eyebrow { color: #1A5EA8; }
 
 h2 {
   font-family: 'Syne', sans-serif;
@@ -148,7 +150,7 @@ h2 {
   font-size: 17px; line-height: 1.75; color: rgba(255,255,255,.5);
   max-width: 480px; margin-bottom: 56px;
 }
-.s-light .s-desc, .s-gray .s-desc { color: #666; }
+.s-light .s-desc, .s-gray .s-desc, .s-lightblue .s-desc { color: #4A6080; }
 
 /* ── VIDEO ── */
 .video-wrap {
@@ -172,6 +174,7 @@ h2 {
 .play-btn:hover { transform: scale(1.08); background: #2470C8; }
 .play-btn svg { width: 26px; height: 26px; fill: white; margin-left: 4px; }
 .play-cap { font-size: 13px; color: rgba(255,255,255,.3); }
+.s-light .play-cap { color: #888; }
 .video-wrap video, .video-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
 
 /* ── FEATURES ── */
@@ -182,10 +185,13 @@ h2 {
 .feat-item {
   display: flex; flex-direction: column;
   gap: 14px; padding: 28px;
-  background: rgba(255,255,255,.05);
-  border: 1px solid rgba(255,255,255,.09);
+  background: rgba(255,255,255,.14);
+  border: 1px solid rgba(255,255,255,.22);
   border-radius: 14px;
 }
+.s-blue .feat-n { color: rgba(255,255,255,.55); }
+.s-blue .feat-item p { color: rgba(255,255,255,.88); }
+.s-blue .feat-tag { color: #fff; background: rgba(255,255,255,.18); }
 .feat-n {
   font-family: 'Syne', sans-serif; font-size: 12px; font-weight: 700;
   color: #5B9FE8; letter-spacing: 1px;
@@ -263,6 +269,10 @@ footer span { font-size: 12px; color: rgba(255,255,255,.2); }
 /* -- STEPS -- */
 .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; max-width: 860px; margin: 56px auto 0; }
 .step { text-align: center; padding: 40px 28px; background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.07); border-radius: 16px; }
+.s-lightblue .step { background: #fff; border: 1px solid rgba(26,94,168,.12); box-shadow: 0 2px 16px rgba(26,94,168,.08); }
+.s-lightblue .step p { color: #4A6080; }
+.s-light .step { background: #F0F6FF; border: 1px solid rgba(26,94,168,.1); }
+.s-light .step p { color: #4A6080; }
 .step-n { font-family: 'Syne', sans-serif; font-size: 48px; font-weight: 800; color: #5B9FE8; line-height: 1; margin-bottom: 16px; }
 .step h3 { font-size: 18px; font-weight: 700; margin-bottom: 10px; }
 .step p { font-size: 14px; color: rgba(255,255,255,.5); line-height: 1.75; }
@@ -320,7 +330,7 @@ footer a:hover { color: #fff; }
 </section>
 
 <!-- VIDEO -->
-<section class="s s-darker s-center" id="grouper">
+<section class="s s-light s-center" id="grouper">
   <div class="eyebrow">Grouper™ em ação</div>
   <h2>Veja o agrupamento<br>automático funcionando.</h2>
   <p class="s-desc" style="margin:0 auto 48px;">Você faz o upload — o Grouper identifica cada surfista e organiza tudo automaticamente. Sem trabalho manual.</p>
@@ -338,7 +348,7 @@ footer a:hover { color: #fff; }
 </section>
 
 <!-- DIFERENCIAIS -->
-<section class="s s-dark" id="diferenciais">
+<section class="s s-blue" id="diferenciais">
   <div class="eyebrow">Tecnologia exclusiva</div>
   <h2>O que só a ONI Wave<br>tem hoje.</h2>
   <p class="s-desc">Desenvolvido especificamente para Surf. Cada diferencial abaixo é algo que o mercado não oferecia.</p>
@@ -403,7 +413,7 @@ footer a:hover { color: #fff; }
 </section>
 
 <!-- TAXA -->
-<section class="s s-blue s-center" id="preco">
+<section class="s s-navy s-center" id="preco">
   <div class="eyebrow">Modelo simples</div>
   <div class="taxa-big">15%</div>
   <div class="taxa-desc">sobre cada venda. Só isso. Mais nada.</div>
@@ -443,7 +453,7 @@ footer a:hover { color: #fff; }
 </section>
 
 <!-- COMO FUNCIONA -->
-<section class="s s-darker s-center" id="como-funciona">
+<section class="s s-lightblue s-center" id="como-funciona">
   <div class="eyebrow">Simples assim</div>
   <h2>Tr&#234;s passos para<br>come&#231;ar a vender.</h2>
   <p class="s-desc" style="margin: 0 auto 0;">Sem configura&#231;&#227;o complexa. Cadastre, suba as fotos, receba.</p>
