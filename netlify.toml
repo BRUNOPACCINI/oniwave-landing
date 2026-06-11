@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "http://fotografoswave.oniphotos.com/*"
+  to = "https://fotografoswave.oniphotos.com/:splat"
+  status = 301
+  force = true
