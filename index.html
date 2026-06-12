@@ -290,6 +290,20 @@ footer span { font-size: 12px; color: rgba(255,255,255,.2); }
 footer a { color: rgba(255,255,255,.4); font-size: 12px; text-decoration: none; transition: color .15s; }
 footer a:hover { color: #fff; }
 
+/* ── PLATAFORMA FOCADA ── */
+.foco-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 24px; max-width: 900px;
+}
+.foco-item {
+  background: #F0F6FF;
+  border: 1px solid rgba(26,94,168,.1);
+  border-radius: 14px; padding: 32px 28px; text-align: left;
+}
+.foco-icon { font-size: 28px; margin-bottom: 14px; }
+.foco-item h3 { font-size: 16px; font-weight: 600; color: #0B1F3A; margin-bottom: 8px; }
+.foco-item p { font-size: 14px; color: #4A6080; line-height: 1.7; }
+
 /* ── DEPOIMENTOS ── */
 .depo-grid {
   display: grid; grid-template-columns: repeat(3, 1fr);
@@ -335,6 +349,7 @@ footer a:hover { color: #fff; }
   .steps { grid-template-columns: 1fr; }
   .feat-list { grid-template-columns: 1fr; }
   .depo-grid { grid-template-columns: 1fr; }
+  .foco-grid { grid-template-columns: 1fr; }
   footer { flex-direction: column; gap: 8px; text-align: center; padding: 24px; }
 }
 </style>
@@ -350,7 +365,6 @@ footer a:hover { color: #fff; }
   <div class="nav-links">
     <a href="#grouper">Grouper&#8482;</a>
     <a href="#diferenciais">Diferenciais</a>
-    <a href="#como-funciona">Como Funciona</a>
     <a href="#depoimentos">Depoimentos</a>
     <a href="#preco">Pre&#231;o</a>
   </div>
@@ -415,29 +429,13 @@ footer a:hover { color: #fff; }
     <div class="feat-item">
       <div class="feat-n">02</div>
       <div>
-        <h3>Pacote do dia inteiro — compra em 1 clique</h3>
-        <p>Fotos e vídeos da sessão completa num único perfil. O surfista compra tudo com um clique. Ticket médio muito maior que venda avulsa.</p>
-        <span class="feat-tag">Mais receita por sessão</span>
-      </div>
-    </div>
-    <div class="feat-item">
-      <div class="feat-n">03</div>
-      <div>
-        <h3>Preview com highlights — sem revelar tudo</h3>
-        <p>O surfista vê uma prévia antes de comprar. Fica curioso, não ansioso. Aumenta a conversão sem entregar o material gratuitamente.</p>
-        <span class="feat-tag">Mais conversão</span>
-      </div>
-    </div>
-    <div class="feat-item">
-      <div class="feat-n">04</div>
-      <div>
         <h3>Reconhecimento facial com alta precisão</h3>
         <p>Mais de 80% das fotos chegam identificadas automaticamente no upload. Tecnologia própria, melhorando a cada sessão.</p>
         <span class="feat-tag">+80% de precisão</span>
       </div>
     </div>
     <div class="feat-item">
-      <div class="feat-n">05</div>
+      <div class="feat-n">03</div>
       <div>
         <h3>Upload 2–3× mais rápido</h3>
         <p>Testado contra outras plataformas com o mesmo volume. Você termina mais cedo e começa a vender antes.</p>
@@ -445,7 +443,7 @@ footer a:hover { color: #fff; }
       </div>
     </div>
     <div class="feat-item">
-      <div class="feat-n">06</div>
+      <div class="feat-n">04</div>
       <div>
         <h3>Vídeo até 1 GB — sem limite de duração</h3>
         <p>Fotos até 10 MB, vídeos até 1 GB, sem tempo mínimo ou máximo. Seu material vai inteiro, sem corte.</p>
@@ -453,53 +451,45 @@ footer a:hover { color: #fff; }
       </div>
     </div>
     <div class="feat-item">
-      <div class="feat-n">07</div>
+      <div class="feat-n">05</div>
       <div>
-        <h3>100% focada em fotos e vídeos de surf</h3>
-        <p>Sem escolinha, sem hotel, sem ruído. O surfista entra e encontra só o que veio buscar. Plataforma limpa e direta.</p>
-        <span class="feat-tag">Zero distração</span>
+        <h3>Preview com highlights — sem revelar tudo</h3>
+        <p>O surfista vê uma prévia antes de comprar. Fica curioso, não ansioso. Aumenta a conversão sem entregar o material gratuitamente.</p>
+        <span class="feat-tag">Mais conversão</span>
+      </div>
+    </div>
+    <div class="feat-item">
+      <div class="feat-n">06</div>
+      <div>
+        <h3>Pacote do dia inteiro — compra em 1 clique</h3>
+        <p>Fotos e vídeos da sessão completa num único perfil. O surfista compra tudo com um clique. Ticket médio muito maior que venda avulsa.</p>
+        <span class="feat-tag">Mais receita por sessão</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TAXA -->
-<section class="s s-navy s-center" id="preco">
-  <div class="eyebrow">Modelo simples</div>
-  <div class="taxa-big">15%</div>
-  <div class="taxa-desc">sobre cada venda. Só isso. Mais nada.</div>
-  <div class="taxa-pills">
-    <div class="taxa-pill">Sem mensalidade</div>
-    <div class="taxa-pill">Sem taxa de saque</div>
-    <div class="taxa-pill">Sem custo de cadastro</div>
-    <div class="taxa-pill">Sem taxa por evento</div>
-    <div class="taxa-pill">Sem surpresas</div>
-  </div>
-</section>
-
-<!-- COMPARE -->
-<section class="s s-gray" id="compare">
-  <div class="eyebrow">Comparativo</div>
-  <h2>ONI Wave vs.<br>outras plataformas.</h2>
-  <p class="s-desc">Dados reais, testados na pr&#225;tica.</p>
-  <div class="cmp-wrap">
-    <table class="cmp">
-      <thead><tr>
-        <th class="hf"></th>
-        <th class="ho">ONI Wave</th>
-        <th class="ht">Outras plataformas</th>
-      </tr></thead>
-      <tbody>
-        <tr><td class="cf">Taxa por venda</td><td class="co"><span class="ok">15%</span></td><td class="ct"><span class="no">20&#8211;35%</span></td></tr>
-        <tr><td class="cf">Agrupamento por surfista</td><td class="co"><span class="ok">Autom&#225;tico</span></td><td class="ct"><span class="no">N&#227;o tem</span></td></tr>
-        <tr><td class="cf">Pacote do dia inteiro</td><td class="co"><span class="ok">Sim</span></td><td class="ct"><span class="no">N&#227;o tem</span></td></tr>
-        <tr><td class="cf">Reconhecimento facial</td><td class="co"><span class="ok">+80% precis&#227;o</span></td><td class="ct"><span class="no">N&#227;o tem</span></td></tr>
-        <tr><td class="cf">Upload r&#225;pido</td><td class="co"><span class="ok">2&#8211;3&#215; mais r&#225;pido</span></td><td class="ct"><span class="no">Padr&#227;o</span></td></tr>
-        <tr><td class="cf">V&#237;deo at&#233; 1 GB</td><td class="co"><span class="ok">Sim</span></td><td class="ct"><span class="no">Limitado</span></td></tr>
-        <tr><td class="cf">Mensalidade</td><td class="co"><span class="ok">R$ 0</span></td><td class="ct"><span class="no">R$ 99&#8211;299/m&#234;s</span></td></tr>
-        <tr><td class="cf">Taxa de saque</td><td class="co"><span class="ok">R$ 0</span></td><td class="ct"><span class="no">Tem</span></td></tr>
-      </tbody>
-    </table>
+<!-- PLATAFORMA FOCADA -->
+<section class="s s-light s-center" id="plataforma">
+  <div class="eyebrow">Para fotógrafos de surf</div>
+  <h2>O surfista entra e encontra<br>só o seu trabalho.</h2>
+  <p class="s-desc" style="margin: 0 auto 56px;">Sem escolinha, sem hotel, sem evento genérico competindo com você. Uma plataforma construída para um único propósito: conectar fotógrafos de surf com seus clientes.</p>
+  <div class="foco-grid">
+    <div class="foco-item">
+      <div class="foco-icon">🚫</div>
+      <h3>Sem ruído externo</h3>
+      <p>Só fotos e vídeos de surf. Nenhum outro serviço disputando a atenção do surfista.</p>
+    </div>
+    <div class="foco-item">
+      <div class="foco-icon">🎯</div>
+      <h3>Visibilidade total</h3>
+      <p>Seu trabalho em destaque. O cliente vê exatamente o que você produziu, sem distração.</p>
+    </div>
+    <div class="foco-item">
+      <div class="foco-icon">🌊</div>
+      <h3>100% surf</h3>
+      <p>Cada funcionalidade foi pensada para a rotina de quem fotografa no mar, todos os dias.</p>
+    </div>
   </div>
 </section>
 
@@ -576,6 +566,46 @@ footer a:hover { color: #fff; }
       </div>
     </div>
 
+  </div>
+</section>
+
+<!-- TAXA -->
+<section class="s s-navy s-center" id="preco">
+  <div class="eyebrow">Modelo simples</div>
+  <div class="taxa-big">15%</div>
+  <div class="taxa-desc">sobre cada venda. Só isso. Mais nada.</div>
+  <div class="taxa-pills">
+    <div class="taxa-pill">Sem mensalidade</div>
+    <div class="taxa-pill">Sem taxa de saque</div>
+    <div class="taxa-pill">Sem custo de cadastro</div>
+    <div class="taxa-pill">Sem taxa por evento</div>
+    <div class="taxa-pill">Sem surpresas</div>
+  </div>
+</section>
+
+<!-- COMPARE -->
+<section class="s s-gray" id="compare">
+  <div class="eyebrow">Comparativo</div>
+  <h2>ONI Wave vs.<br>outras plataformas.</h2>
+  <p class="s-desc">Dados reais, testados na pr&#225;tica.</p>
+  <div class="cmp-wrap">
+    <table class="cmp">
+      <thead><tr>
+        <th class="hf"></th>
+        <th class="ho">ONI Wave</th>
+        <th class="ht">Outras plataformas</th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="cf">Taxa por venda</td><td class="co"><span class="ok">15%</span></td><td class="ct"><span class="no">20&#8211;35%</span></td></tr>
+        <tr><td class="cf">Agrupamento por surfista</td><td class="co"><span class="ok">Autom&#225;tico</span></td><td class="ct"><span class="no">N&#227;o tem</span></td></tr>
+        <tr><td class="cf">Pacote do dia inteiro</td><td class="co"><span class="ok">Sim</span></td><td class="ct"><span class="no">N&#227;o tem</span></td></tr>
+        <tr><td class="cf">Reconhecimento facial</td><td class="co"><span class="ok">+80% precis&#227;o</span></td><td class="ct"><span class="no">N&#227;o tem</span></td></tr>
+        <tr><td class="cf">Upload r&#225;pido</td><td class="co"><span class="ok">2&#8211;3&#215; mais r&#225;pido</span></td><td class="ct"><span class="no">Padr&#227;o</span></td></tr>
+        <tr><td class="cf">V&#237;deo at&#233; 1 GB</td><td class="co"><span class="ok">Sim</span></td><td class="ct"><span class="no">Limitado</span></td></tr>
+        <tr><td class="cf">Mensalidade</td><td class="co"><span class="ok">R$ 0</span></td><td class="ct"><span class="no">R$ 99&#8211;299/m&#234;s</span></td></tr>
+        <tr><td class="cf">Taxa de saque</td><td class="co"><span class="ok">R$ 0</span></td><td class="ct"><span class="no">Tem</span></td></tr>
+      </tbody>
+    </table>
   </div>
 </section>
 
