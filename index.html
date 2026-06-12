@@ -429,12 +429,17 @@ footer a:hover { color: #fff; }
   .nav-cta { display: none; }
   .nav-links { display: none; }
   .s { padding: 64px 24px; }
-  .hero-stats { display: flex; }
-  .hstat { padding: 12px 8px; }
-  .hstat-val { font-size: 16px; }
+  .hero-stats {
+    position: static; transform: none;
+    display: flex; width: 100%;
+    border-radius: 0; white-space: normal;
+    margin-top: 32px;
+  }
+  .hstat { padding: 12px 6px; flex: 1; }
+  .hstat-val { font-size: 15px; }
   .hstat-label { font-size: 9px; }
   .cta-row { flex-direction: column; }
-  .hero { height: auto; padding: 100px 24px 64px; }
+  .hero { height: auto; padding: 100px 0 0; }
   .steps { grid-template-columns: 1fr; }
   .feat-list { grid-template-columns: 1fr; }
   .depo-grid { grid-template-columns: 1fr; }
