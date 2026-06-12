@@ -83,10 +83,19 @@ nav.scrolled {
   text-shadow: 0 2px 40px rgba(0,0,0,.3);
 }
 .hero h1 em { font-style: normal; color: #5B9FE8; }
-.hero-sub {
-  font-size: clamp(15px, 1.8vw, 18px);
-  color: rgba(255,255,255,.75); line-height: 1.7;
-  max-width: 500px; margin: 0 auto 44px;
+.hero-bullets {
+  list-style: none;
+  display: flex; flex-direction: column; align-items: center;
+  gap: 10px; margin: 0 auto 44px;
+}
+.hero-bullets li {
+  font-size: clamp(14px, 1.6vw, 16px);
+  color: rgba(255,255,255,.8);
+  display: flex; align-items: center; gap: 8px;
+}
+.hero-bullets li::before {
+  content: ''; width: 6px; height: 6px; border-radius: 50%;
+  background: #5B9FE8; flex-shrink: 0;
 }
 .hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 .btn-white {
@@ -353,7 +362,12 @@ footer a:hover { color: #fff; }
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <h1>A tecnologia que o<br>surf <em>merecia.</em></h1>
-    <p class="hero-sub">Agrupamento automático de surfistas. Pacote do dia inteiro. Upload mais rápido. 15% de taxa — só sobre o que você vender.</p>
+    <ul class="hero-bullets">
+      <li>Agrupamento automático de surfistas</li>
+      <li>Pacote do dia inteiro</li>
+      <li>Upload mais rápido</li>
+      <li>15% de taxa — só sobre o que você vender</li>
+    </ul>
     <div class="hero-actions">
       <a href="https://wave.oniphotos.com/app/cadastro" class="btn-white">Quero ser fotógrafo parceiro →</a>
     </div>
