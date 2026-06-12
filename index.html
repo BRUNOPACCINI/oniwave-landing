@@ -429,7 +429,14 @@ footer a:hover { color: #fff; }
   .nav-cta { display: none; }
   .nav-links { display: none; }
   .s { padding: 64px 24px; }
-  .hero-stats { display: none; }
+  .hero-stats {
+    position: static; transform: none;
+    display: grid; grid-template-columns: 1fr 1fr;
+    width: 100%; border-radius: 12px;
+    margin-top: 28px; white-space: normal;
+  }
+  .hstat { padding: 16px 12px; }
+  .hstat-val { font-size: 20px; }
   .cta-row { flex-direction: column; }
   .hero { height: auto; padding: 120px 32px 72px; }
   .steps { grid-template-columns: 1fr; }
