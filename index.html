@@ -290,6 +290,28 @@ footer span { font-size: 12px; color: rgba(255,255,255,.2); }
 footer a { color: rgba(255,255,255,.4); font-size: 12px; text-decoration: none; transition: color .15s; }
 footer a:hover { color: #fff; }
 
+/* ── SUPORTE BOX ── */
+.suporte-box {
+  margin-top: 48px; max-width: 640px;
+  background: #fff; border: 1px solid rgba(26,94,168,.12);
+  border-radius: 16px; padding: 36px 40px;
+  text-align: center; box-shadow: 0 2px 20px rgba(26,94,168,.08);
+}
+.suporte-tag {
+  display: inline-block; margin-bottom: 16px;
+  font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+  color: #1A5EA8; background: #EEF4FF;
+  padding: 6px 14px; border-radius: 20px;
+}
+.suporte-box h3 {
+  font-family: 'Syne', sans-serif; font-size: clamp(18px, 2.5vw, 24px);
+  font-weight: 800; color: #0B1F3A; line-height: 1.25;
+  margin-bottom: 14px; letter-spacing: -0.5px;
+}
+.suporte-box p {
+  font-size: 15px; color: #4A6080; line-height: 1.75;
+}
+
 /* ── PLATAFORMA FOCADA ── */
 .foco-grid {
   display: grid; grid-template-columns: repeat(3, 1fr);
@@ -411,6 +433,11 @@ footer a:hover { color: #fff; }
   <p class="s-desc" style="margin:0 auto 48px;">Em segundos, o surfista acha todas as fotos e vídeos dele e compra com um clique. Sem precisar te chamar.</p>
   <div class="video-wrap">
     <video src="oni_wave_cliente_v2.mp4" autoplay loop muted playsinline></video>
+  </div>
+  <div class="suporte-box">
+    <div class="suporte-tag">💬 Suporte via WhatsApp</div>
+    <h3>Seu trabalho é tirar a foto e o vídeo.<br>O resto é nosso.</h3>
+    <p>Qualquer dúvida do surfista — encontrar mídias, acessar o pedido, finalizar a compra — a ONI Wave resolve direto na tela, via WhatsApp. Aqui a gente trabalha para você, não o contrário.</p>
   </div>
 </section>
 
