@@ -407,6 +407,34 @@ footer a:hover { color: #fff; }
   font-size: 15px; color: #4A6080; line-height: 1.75;
 }
 
+/* ── COMO O SURFISTA TE ENCONTRA ── */
+.discovery-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; max-width: 860px; margin: 40px auto 0; }
+.discovery-item { background: #fff; border: 1px solid rgba(26,94,168,.1); border-radius: 14px; padding: 28px 24px; text-align: left; }
+.discovery-step { font-size: 11px; font-weight: 700; letter-spacing: .08em; color: #1A5EA8; text-transform: uppercase; margin-bottom: 10px; }
+.discovery-item h4 { font-size: 15px; font-weight: 700; color: #0B1F3A; margin-bottom: 6px; }
+.discovery-item p { font-size: 13px; color: #4A6080; line-height: 1.65; }
+@media (max-width: 860px) { .discovery-grid { grid-template-columns: 1fr; } }
+
+/* ── TAXA EXEMPLO ── */
+.taxa-exemplo { display: flex; gap: 16px; max-width: 640px; margin: 36px auto 0; flex-wrap: wrap; justify-content: center; }
+.taxa-ex-card { flex: 1; min-width: 200px; border-radius: 14px; padding: 24px; text-align: center; }
+.taxa-ex-card.sem { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1); }
+.taxa-ex-card.com { background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.3); }
+.taxa-ex-label { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.5); margin-bottom: 12px; }
+.taxa-ex-card.com .taxa-ex-label { color: rgba(255,255,255,.85); }
+.taxa-ex-num { font-family: 'Syne', sans-serif; font-size: 32px; font-weight: 800; color: #fff; }
+.taxa-ex-card.com .taxa-ex-num { color: #5B9FE8; }
+.taxa-ex-detail { font-size: 12px; color: rgba(255,255,255,.5); margin-top: 6px; line-height: 1.5; }
+.taxa-ex-card.com .taxa-ex-detail { color: rgba(255,255,255,.75); }
+.taxa-ex-arrow { display: flex; align-items: center; font-size: 22px; color: rgba(255,255,255,.3); padding-top: 20px; }
+
+/* ── MIGRAR ── */
+.migrar-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; max-width: 860px; margin: 36px auto 0; }
+.migrar-item { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18); border-radius: 14px; padding: 28px 24px; text-align: left; }
+.migrar-item h4 { font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+.migrar-item p { font-size: 13px; color: rgba(255,255,255,.75); line-height: 1.65; }
+@media (max-width: 860px) { .migrar-grid { grid-template-columns: 1fr; } }
+
 /* ── PLATAFORMA FOCADA ── */
 .foco-grid {
   display: grid; grid-template-columns: repeat(3, 1fr);
@@ -561,6 +589,30 @@ footer a:hover { color: #fff; }
     <div class="suporte-tag">💬 Suporte via WhatsApp</div>
     <h3>Seu trabalho é tirar a foto e o vídeo.<br>O resto é nosso.</h3>
     <p>Qualquer dúvida do surfista — encontrar mídias, acessar o pedido, finalizar a compra — a ONI wave resolve direto na tela, via WhatsApp. Aqui a gente trabalha para você, não o contrário.</p>
+  </div>
+</section>
+
+<!-- COMO O SURFISTA TE ENCONTRA -->
+<section class="s s-gray s-center">
+  <div class="eyebrow">Sem mistério para o surfista</div>
+  <h2>Seus clientes te encontram.<br>Mesmo sendo uma plataforma nova.</h2>
+  <p class="s-desc">O surfista não precisa conhecer a ONI wave. Você manda o link direto — ele clica, vê as fotos dele e compra. Simples assim.</p>
+  <div class="discovery-grid">
+    <div class="discovery-item">
+      <div class="discovery-step">Você</div>
+      <h4>Manda o link da sessão</h4>
+      <p>Após o upload, você compartilha um link único para os surfistas do dia via WhatsApp, Instagram ou grupo.</p>
+    </div>
+    <div class="discovery-item">
+      <div class="discovery-step">O surfista</div>
+      <h4>Clica e vê só o dele</h4>
+      <p>O Grouper já separou tudo. Ele abre o link e encontra só as fotos e vídeos dele — sem precisar procurar.</p>
+    </div>
+    <div class="discovery-item">
+      <div class="discovery-step">Resultado</div>
+      <h4>Compra em segundos</h4>
+      <p>Sem cadastro, sem conhecer a plataforma. A experiência é tão fluida que ele compra antes de fechar o celular.</p>
+    </div>
   </div>
 </section>
 
@@ -755,6 +807,21 @@ footer a:hover { color: #fff; }
   <p style="font-size:16px; color:rgba(255,255,255,.7); max-width:520px; margin: 0 auto 40px; line-height:1.7;">
     Com o Grouper™, cada surfista encontra e compra todo o material dele. Isso significa mais vendas por sessão — e 85% de cada uma vai direto para você.
   </p>
+  <div class="taxa-exemplo">
+    <div class="taxa-ex-card sem">
+      <div class="taxa-ex-label">Sem agrupamento<br>10% de taxa</div>
+      <div class="taxa-ex-num">R$170</div>
+      <div class="taxa-ex-detail">Sessão com 20 surfistas<br>~2 vendas × R$85 × 90%</div>
+    </div>
+    <div class="taxa-ex-arrow">→</div>
+    <div class="taxa-ex-card com">
+      <div class="taxa-ex-label">Com Grouper™<br>15% de taxa</div>
+      <div class="taxa-ex-num">R$867</div>
+      <div class="taxa-ex-detail">Mesma sessão<br>~12 vendas × R$85 × 85%</div>
+    </div>
+  </div>
+  <p style="font-size:12px; color:rgba(255,255,255,.35); margin-top:16px;">Simulação com base em sessões reais. Resultados variam por spot e época.</p>
+
   <div class="taxa-pills">
     <div class="taxa-pill">Sem mensalidade</div>
     <div class="taxa-pill">Sem taxa de saque</div>
@@ -788,6 +855,28 @@ footer a:hover { color: #fff; }
       </tbody>
     </table>
   </div>
+</section>
+
+<!-- MIGRAR -->
+<section class="s s-blue s-center">
+  <div class="eyebrow">Troca sem dor</div>
+  <h2>Migrar é simples.<br>Testar custa zero.</h2>
+  <p class="s-desc" style="color:rgba(255,255,255,.8);">Não precisa abandonar tudo de uma vez. Cadastre, faça uma sessão, veja a diferença na prática.</p>
+  <div class="migrar-grid">
+    <div class="migrar-item">
+      <h4>Seus dados são seus</h4>
+      <p>Nada fica preso aqui. Suas fotos, seus clientes, seu histórico — você leva quando quiser. Sem lock-in.</p>
+    </div>
+    <div class="migrar-item">
+      <h4>Comece por uma sessão</h4>
+      <p>Não precisa migrar tudo de vez. Teste com uma sessão real. Se não convencer, não perdeu nada — é gratuito.</p>
+    </div>
+    <div class="migrar-item">
+      <h4>Suporte na transição</h4>
+      <p>Tem dúvida técnica ou quer ajuda para começar? Nossa equipe acompanha os primeiros uploads pelo WhatsApp.</p>
+    </div>
+  </div>
+  <a href="https://wave.oniphotos.com/cadastro" class="btn-white" style="margin-top: 40px;">Testar com uma sessão →</a>
 </section>
 
 <!-- CTA FINAL -->
