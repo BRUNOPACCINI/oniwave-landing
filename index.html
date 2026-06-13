@@ -262,7 +262,7 @@ h2 {
 /* ── COMPARE ── */
 .cmp-wrap { max-width: 680px; margin: 48px auto 0; }
 .cmp { width: 100%; border-collapse: collapse; }
-.cmp th { padding: 12px 18px; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; text-align: left; }
+.cmp th { padding: 12px 18px; font-size: 13px; font-weight: 700; text-align: left; }
 .cmp th.hf { color: #999; width: 42%; }
 .cmp th.ho { background: #080F18; color: #fff; width: 29%; text-align: center; border-radius: 8px 8px 0 0; }
 .cmp th.ht { background: #EEEEEE; color: #AAA; width: 29%; text-align: center; }
@@ -272,6 +272,13 @@ h2 {
 .cmp td.co { background: #F5F8FC; color: #1A5EA8; font-weight: 700; text-align: center; }
 .cmp td.ct { color: #CCC; text-align: center; }
 .ok::before { content: '✓  '; color: #1A7A4A; }
+@media (max-width: 480px) {
+  .cmp-wrap { overflow-x: auto; }
+  .cmp th { padding: 8px 8px; font-size: 11px; }
+  .cmp td { padding: 10px 8px; font-size: 12px; }
+  .cmp th.hf { width: 36%; }
+  .cmp th.ho, .cmp th.ht { width: 32%; }
+}
 .no::before { content: '✗  '; color: #CCC; }
 
 /* ── CTA ── */
@@ -584,6 +591,33 @@ footer a:hover { color: #fff; }
   </div>
 </section>
 
+<!-- COMPARE -->
+<section class="s s-gray" id="compare">
+  <div class="eyebrow">Comparativo</div>
+  <h2>ONI wave vs.<br>outras plataformas.</h2>
+  <p class="s-desc">Comparativo direto com as principais plataformas.</p>
+  <div class="cmp-wrap">
+    <table class="cmp">
+      <thead><tr>
+        <th class="hf"></th>
+        <th class="ho">ONI wave</th>
+        <th class="ht">Outras plataformas</th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="cf">Taxa por venda</td><td class="co"><span class="ok">15%</span></td><td class="ct"><span class="no">20&#8211;35%</span></td></tr>
+        <tr><td class="cf">Agrupamento por surfista</td><td class="co"><span class="ok">Autom&#225;tico</span></td><td class="ct"><span class="no">Manual</span></td></tr>
+        <tr><td class="cf">Pacote do dia inteiro</td><td class="co"><span class="ok">Sim</span></td><td class="ct"><span class="no">N&#227;o tem</span></td></tr>
+        <tr><td class="cf">Reconhecimento facial</td><td class="co"><span class="ok">+80% precis&#227;o</span></td><td class="ct"><span class="no">Impreciso / manual</span></td></tr>
+        <tr><td class="cf">Upload r&#225;pido</td><td class="co"><span class="ok">2&#8211;3&#215; mais r&#225;pido</span></td><td class="ct"><span class="no">Padr&#227;o</span></td></tr>
+        <tr><td class="cf">V&#237;deo at&#233; 1 GB</td><td class="co"><span class="ok">Sim</span></td><td class="ct"><span class="no">Limitado</span></td></tr>
+        <tr><td class="cf">Mensalidade</td><td class="co"><span class="ok">R$ 0</span></td><td class="ct"><span class="no">Tem</span></td></tr>
+        <tr><td class="cf">Taxa de saque</td><td class="co"><span class="ok">R$ 0</span></td><td class="ct"><span class="no">Tem</span></td></tr>
+        <tr><td class="cf">Repasse</td><td class="co"><span class="ok">Em at&#233; 1 dia &#250;til</span></td><td class="ct"><span class="no">At&#233; 3 dias</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
 <!-- COMO O SURFISTA TE ENCONTRA -->
 <section class="s s-gray s-center">
   <div class="eyebrow">Como o surfista chega até você</div>
@@ -805,33 +839,6 @@ footer a:hover { color: #fff; }
     <div class="taxa-pill">Sem custo de cadastro</div>
     <div class="taxa-pill">Sem taxa por evento</div>
     <div class="taxa-pill">Sem surpresas</div>
-  </div>
-</section>
-
-<!-- COMPARE -->
-<section class="s s-gray" id="compare">
-  <div class="eyebrow">Comparativo</div>
-  <h2>ONI wave vs.<br>outras plataformas.</h2>
-  <p class="s-desc">Comparativo direto com as principais plataformas.</p>
-  <div class="cmp-wrap">
-    <table class="cmp">
-      <thead><tr>
-        <th class="hf"></th>
-        <th class="ho">ONI wave</th>
-        <th class="ht">Outras plataformas</th>
-      </tr></thead>
-      <tbody>
-        <tr><td class="cf">Taxa por venda</td><td class="co"><span class="ok">15%</span></td><td class="ct"><span class="no">20&#8211;35%</span></td></tr>
-        <tr><td class="cf">Agrupamento por surfista</td><td class="co"><span class="ok">Autom&#225;tico</span></td><td class="ct"><span class="no">Manual</span></td></tr>
-        <tr><td class="cf">Pacote do dia inteiro</td><td class="co"><span class="ok">Sim</span></td><td class="ct"><span class="no">N&#227;o tem</span></td></tr>
-        <tr><td class="cf">Reconhecimento facial</td><td class="co"><span class="ok">+80% precis&#227;o</span></td><td class="ct"><span class="no">Impreciso / manual</span></td></tr>
-        <tr><td class="cf">Upload r&#225;pido</td><td class="co"><span class="ok">2&#8211;3&#215; mais r&#225;pido</span></td><td class="ct"><span class="no">Padr&#227;o</span></td></tr>
-        <tr><td class="cf">V&#237;deo at&#233; 1 GB</td><td class="co"><span class="ok">Sim</span></td><td class="ct"><span class="no">Limitado</span></td></tr>
-        <tr><td class="cf">Mensalidade</td><td class="co"><span class="ok">R$ 0</span></td><td class="ct"><span class="no">Tem</span></td></tr>
-        <tr><td class="cf">Taxa de saque</td><td class="co"><span class="ok">R$ 0</span></td><td class="ct"><span class="no">Tem</span></td></tr>
-        <tr><td class="cf">Repasse</td><td class="co"><span class="ok">Em at&#233; 1 dia &#250;til</span></td><td class="ct"><span class="no">At&#233; 3 dias</span></td></tr>
-      </tbody>
-    </table>
   </div>
 </section>
 
