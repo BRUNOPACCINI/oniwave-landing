@@ -225,7 +225,7 @@ h2 {
 .s-blue .feat-item p { color: rgba(255,255,255,.88); }
 .s-blue .feat-tag { color: #fff; background: rgba(255,255,255,.18); }
 .feat-n { display: none; }
-.feat-item h3 { font-size: 17px; font-weight: 700; margin-bottom: 6px; line-height: 1.35; color: #0B1F3A; }
+.feat-item h3 { font-size: 17px; font-weight: 700; margin-bottom: 0; line-height: 1.35; color: #0B1F3A; }
 .feat-item p { font-size: 14px; color: rgba(255,255,255,.78); line-height: 1.7; }
 .feat-tag {
   display: inline-block; margin-top: auto; padding-top: 10px;
@@ -233,6 +233,14 @@ h2 {
   color: #5B9FE8; background: rgba(91,159,232,.1);
   padding: 4px 12px; border-radius: 20px; align-self: flex-start;
 }
+.feat-details { width: 100%; }
+.feat-details summary { list-style: none; cursor: pointer; display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.feat-details summary::-webkit-details-marker { display: none; }
+.feat-details p, .feat-details .feat-tag { margin-top: 12px; }
+.feat-toggle { font-size: 10px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: #5B9FE8; white-space: nowrap; margin-top: 3px; flex-shrink: 0; }
+.feat-toggle::before { content: 'VER +'; }
+.feat-details[open] .feat-toggle::before { content: 'VER −'; }
+.s-blue .feat-toggle { color: rgba(255,255,255,.5); }
 
 /* ── TAXA ── */
 .taxa-big {
@@ -659,51 +667,51 @@ footer a:hover { color: #fff; }
   <div class="feat-list">
     <div class="feat-item">
       <div class="feat-n">01</div>
-      <div>
-        <h3>Reconhecimento facial com alta precisão</h3>
+      <details class="feat-details">
+        <summary><h3>Reconhecimento facial com alta precisão</h3><span class="feat-toggle"></span></summary>
         <p>+80% das fotos chegam marcadas no upload. Sem você identificar uma a uma — é automático.</p>
         <span class="feat-tag">+80% de precisão</span>
-      </div>
+      </details>
     </div>
     <div class="feat-item">
       <div class="feat-n">03</div>
-      <div>
-        <h3>Upload 2–3× mais rápido</h3>
+      <details class="feat-details">
+        <summary><h3>Upload 2–3× mais rápido</h3><span class="feat-toggle"></span></summary>
         <p>Você termina a sessão, sobe as fotos e vídeos e vai embora. Enquanto outras plataformas ainda estão carregando.</p>
         <span class="feat-tag">Comprovado em teste</span>
-      </div>
+      </details>
     </div>
     <div class="feat-item">
       <div class="feat-n">04</div>
-      <div>
-        <h3>Vídeo até 1 GB — sem limite de duração</h3>
+      <details class="feat-details">
+        <summary><h3>Vídeo até 1 GB — sem limite de duração</h3><span class="feat-toggle"></span></summary>
         <p>Fotos até 10 MB, vídeos até 1 GB, sem tempo mínimo ou máximo. Seu material vai inteiro, sem corte.</p>
         <span class="feat-tag">Sem restrições</span>
-      </div>
+      </details>
     </div>
     <div class="feat-item">
       <div class="feat-n">05</div>
-      <div>
-        <h3>Preview com highlights — sem revelar tudo</h3>
+      <details class="feat-details">
+        <summary><h3>Preview com highlights — sem revelar tudo</h3><span class="feat-toggle"></span></summary>
         <p>O surfista vê o suficiente para querer comprar — sem receber de graça. Você não atende, não convence, não manda preview no WhatsApp.</p>
         <span class="feat-tag">Mais conversão</span>
-      </div>
+      </details>
     </div>
     <div class="feat-item">
       <div class="feat-n">06</div>
-      <div>
-        <h3>Pacote do dia inteiro — compra em 1 clique</h3>
+      <details class="feat-details">
+        <summary><h3>Pacote do dia inteiro — compra em 1 clique</h3><span class="feat-toggle"></span></summary>
         <p>Fotos e vídeos num único perfil. O surfista compra tudo em 1 clique. Ticket médio maior sem você fazer nada a mais.</p>
         <span class="feat-tag">Mais receita por sessão</span>
-      </div>
+      </details>
     </div>
     <div class="feat-item">
       <div class="feat-n">07</div>
-      <div>
-        <h3>Cartão físico personalizado com seu nome</h3>
+      <details class="feat-details">
+        <summary><h3>Cartão físico personalizado com seu nome</h3><span class="feat-toggle"></span></summary>
         <p>Cartões à prova d'água, impressos com a sua identidade, para distribuir direto na praia. O surfista escaneia o QR code, abre a galeria dele e compra — sem depender de você estar online.</p>
         <span class="feat-tag">Exclusivo ONI wave</span>
-      </div>
+      </details>
     </div>
   </div>
 </section>
