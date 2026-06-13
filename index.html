@@ -498,11 +498,26 @@ footer a:hover { color: #fff; }
   .feat-list { grid-template-columns: 1fr; }
   .depo-grid { grid-template-columns: 1fr; }
   .foco-grid { grid-template-columns: 1fr; }
-  .cmp-grouper { grid-template-columns: 1fr; }
-  .cmp-grouper-vs { padding: 12px 0; }
-  .cmp-grouper-outros { order: 2; }
-  .cmp-grouper-vs { order: 1; }
+  .cmp-grouper {
+    grid-template-columns: 1fr;
+    background: rgba(255,255,255,.12);
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: 16px;
+    overflow: hidden;
+    gap: 0;
+    padding: 0;
+  }
+  .cmp-grouper-col {
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 20px 24px !important;
+    border-bottom: 1px solid rgba(255,255,255,.12) !important;
+  }
+  .cmp-grouper-vs { order: 1; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,.12); }
   .cmp-grouper-oni { order: 0; }
+  .cmp-grouper-outros { order: 2; }
+  .cmp-grouper-toggle-btn { order: 3; margin: 0; padding: 14px 0; width: 100%; }
   footer { flex-direction: column; gap: 8px; text-align: center; padding: 24px; }
 }
 </style>
