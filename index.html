@@ -365,6 +365,9 @@ footer a:hover { color: #fff; }
 .cmp-grouper-item.oni-item {
   background: rgba(255,255,255,.12); color: #fff; font-weight: 500;
 }
+.cmp-grouper-expandable { display: none; }
+.cmp-grouper.open .cmp-grouper-expandable { display: block; }
+.cmp-grouper-toggle-btn { display: block; margin: 16px auto 0; background: none; border: none; cursor: pointer; font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: rgba(255,255,255,.5); }
 
 /* ── GROUPER DESTAQUE ── */
 /* ── CREDIBILIDADE ── */
@@ -644,25 +647,30 @@ footer a:hover { color: #fff; }
     <div class="cmp-grouper-col cmp-grouper-outros">
       <div class="cmp-grouper-label">Outras plataformas</div>
       <div class="cmp-grouper-title">Agrupam por sequência</div>
-      <div class="cmp-grouper-desc">O surfista recebe um álbum com centenas de fotos e vídeos misturados. Precisa procurar as dele uma por uma.</div>
-      <div class="cmp-grouper-items">
-        <div class="cmp-grouper-item">📁 Sequência das 7h</div>
-        <div class="cmp-grouper-item muted">Surfistas A, B, C, D misturados</div>
-        <div class="cmp-grouper-item muted">Surfista procura manualmente</div>
+      <div class="cmp-grouper-expandable">
+        <div class="cmp-grouper-desc">O surfista recebe um álbum com centenas de fotos e vídeos misturados. Precisa procurar as dele uma por uma.</div>
+        <div class="cmp-grouper-items">
+          <div class="cmp-grouper-item">📁 Sequência das 7h</div>
+          <div class="cmp-grouper-item muted">Surfistas A, B, C, D misturados</div>
+          <div class="cmp-grouper-item muted">Surfista procura manualmente</div>
+        </div>
       </div>
     </div>
     <div class="cmp-grouper-vs">VS</div>
     <div class="cmp-grouper-col cmp-grouper-oni">
       <div class="cmp-grouper-label oni">ONI wave — Grouper™</div>
       <div class="cmp-grouper-title">Agrupa por surfista</div>
-      <div class="cmp-grouper-desc">Cada surfista encontra só as fotos e vídeos dele. Pronto para comprar em segundos.</div>
-      <div class="cmp-grouper-items">
-        <div class="cmp-grouper-item oni-item">👤 João — 47 fotos + 3 vídeos</div>
-        <div class="cmp-grouper-item oni-item">👤 Pedro — 31 fotos + 2 vídeos</div>
-        <div class="cmp-grouper-item oni-item">👤 Lucas — 58 fotos + 4 vídeos</div>
+      <div class="cmp-grouper-expandable">
+        <div class="cmp-grouper-desc">Cada surfista encontra só as fotos e vídeos dele. Pronto para comprar em segundos.</div>
+        <div class="cmp-grouper-items">
+          <div class="cmp-grouper-item oni-item">👤 João — 47 fotos + 3 vídeos</div>
+          <div class="cmp-grouper-item oni-item">👤 Pedro — 31 fotos + 2 vídeos</div>
+          <div class="cmp-grouper-item oni-item">👤 Lucas — 58 fotos + 4 vídeos</div>
+        </div>
       </div>
     </div>
   </div>
+  <button class="cmp-grouper-toggle-btn" id="grouperToggle">VER +</button>
 
   <div class="feat-list">
     <div class="feat-item">
@@ -850,6 +858,15 @@ window.addEventListener('scroll', () => {
 });
 const bg = document.getElementById('heroBg');
 if (bg) requestAnimationFrame(() => bg.classList.add('loaded'));
+
+const grouperToggle = document.getElementById('grouperToggle');
+if (grouperToggle) {
+  grouperToggle.addEventListener('click', () => {
+    const grid = grouperToggle.previousElementSibling;
+    const open = grid.classList.toggle('open');
+    grouperToggle.textContent = open ? 'VER −' : 'VER +';
+  });
+}
 </script>
 </body>
 </html>
