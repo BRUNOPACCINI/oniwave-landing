@@ -374,7 +374,7 @@ footer a:hover { color: #fff; }
 }
 .cmp-grouper-expandable { display: none; }
 .cmp-grouper.open .cmp-grouper-expandable { display: block; }
-.cmp-grouper-toggle-btn { display: block; margin: 16px auto 0; background: none; border: none; cursor: pointer; font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: rgba(255,255,255,.5); }
+.cmp-grouper-toggle-btn { grid-column: 1 / -1; display: block; margin: 16px auto 0; background: none; border: none; cursor: pointer; font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: rgba(255,255,255,.5); }
 
 /* ── GROUPER DESTAQUE ── */
 /* ── CREDIBILIDADE ── */
@@ -703,8 +703,8 @@ footer a:hover { color: #fff; }
         </div>
       </div>
     </div>
-  </div>
   <button class="cmp-grouper-toggle-btn" id="grouperToggle">VER +</button>
+  </div>
 
   <div class="feat-list">
     <div class="feat-item">
@@ -869,7 +869,7 @@ if (bg) requestAnimationFrame(() => bg.classList.add('loaded'));
 const grouperToggle = document.getElementById('grouperToggle');
 if (grouperToggle) {
   grouperToggle.addEventListener('click', () => {
-    const grid = grouperToggle.previousElementSibling;
+    const grid = grouperToggle.closest('.cmp-grouper');
     const open = grid.classList.toggle('open');
     grouperToggle.textContent = open ? 'VER −' : 'VER +';
   });
