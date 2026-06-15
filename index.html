@@ -14,7 +14,7 @@ body { font-family: 'Inter', sans-serif; background: #071428; color: #fff; overf
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   display: flex; align-items: center; justify-content: space-between;
-  padding: 0 56px; height: 68px;
+  padding: 0 max(56px, calc((100vw - 1200px) / 2 + 56px)); height: 68px;
   background: transparent;
   transition: background .3s, border-color .3s;
 }
@@ -66,7 +66,7 @@ nav.scrolled .nav-brand-name span { color: #fff; }
     rgba(7,20,40,.97) 100%
   );
 }
-.hero-content { position: relative; z-index: 1; max-width: 820px; }
+.hero-content { position: relative; z-index: 1; max-width: 820px; margin-left: auto; margin-right: auto; }
 .hero-badge {
   display: inline-flex; align-items: center; gap: 8px;
   background: rgba(255,255,255,.1);
@@ -156,7 +156,7 @@ nav.scrolled .nav-brand-name span { color: #fff; }
 .hstat-label { font-size: 11px; color: rgba(255,255,255,.7); margin-top: 3px; }
 
 /* ── SECTIONS ── */
-.s { padding: 48px 56px; }
+.s { padding: 48px max(56px, calc((100vw - 1200px) / 2 + 56px)); }
 .s-center { text-align: center; }
 .s-dark { background: #071428; }
 .s-darker { background: #040E20; }
@@ -220,7 +220,7 @@ h2 {
   gap: 14px; padding: 28px;
   background: rgba(255,255,255,.14);
   border: 1px solid rgba(255,255,255,.22);
-  border-radius: 14px;
+  border-radius: 14px; text-align: left;
 }
 .s-blue .feat-n { color: rgba(255,255,255,.55); }
 .s-blue .feat-item p { color: rgba(255,255,255,.88); }
@@ -261,7 +261,7 @@ h2 {
 .taxa-pill::before { content: '✓'; font-weight: 800; font-size: 12px; }
 
 /* ── COMPARE ── */
-.cmp-wrap { max-width: 680px; margin: 48px auto 0; }
+.cmp-wrap { max-width: 680px; margin: 48px auto 0; text-align: left; }
 .cmp { width: 100%; border-collapse: collapse; }
 .cmp th { padding: 12px 18px; font-size: 13px; font-weight: 700; text-align: left; }
 .cmp th.hf { color: #999; width: 42%; }
@@ -298,7 +298,7 @@ h2 {
 
 /* ── FOOTER ── */
 footer {
-  background: #02060C; padding: 28px 56px;
+  background: #02060C; padding: 28px max(56px, calc((100vw - 1200px) / 2 + 56px));
   display: flex; align-items: center; justify-content: space-between;
   border-top: 1px solid rgba(255,255,255,.05);
 }
@@ -333,7 +333,7 @@ footer a:hover { color: #fff; }
   align-items: center;
 }
 .cmp-grouper-col {
-  border-radius: 16px; padding: 28px;
+  border-radius: 16px; padding: 28px; text-align: left;
 }
 .cmp-grouper-outros {
   background: rgba(255,255,255,.08);
@@ -383,7 +383,7 @@ footer a:hover { color: #fff; }
 .cred-logo-wrap img { height: 48px; width: auto; opacity: .9; }
 .cred-logo-label { font-size: 11px; font-weight: 600; letter-spacing: .08em; color: rgba(11,31,58,.5); text-transform: uppercase; }
 .cred-divider { width: 1px; height: 80px; background: rgba(26,94,168,.15); flex-shrink: 0; }
-.cred-text { max-width: 480px; }
+.cred-text { max-width: 480px; text-align: left; }
 .cred-text p { font-size: clamp(15px,1.7vw,17px); color: #0B1F3A; line-height: 1.65; margin: 0 0 20px; }
 .cred-stats { display: flex; gap: 32px; flex-wrap: wrap; }
 .cred-stat-val { font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 800; color: #1A5EA8; }
@@ -460,6 +460,7 @@ footer a:hover { color: #fff; }
   padding: 32px 28px;
   display: flex; flex-direction: column; gap: 18px;
   box-shadow: 0 2px 20px rgba(26,94,168,.07);
+  text-align: left;
 }
 .depo-avatar {
   width: 68px; height: 68px; border-radius: 50%;
@@ -607,7 +608,7 @@ footer a:hover { color: #fff; }
 </section>
 
 <!-- COMPARE -->
-<section class="s s-gray" id="compare">
+<section class="s s-gray s-center" id="compare">
   <div class="eyebrow">Comparativo</div>
   <h2>ONI wave vs.<br>outras plataformas.</h2>
   <p class="s-desc">Comparativo direto com as principais plataformas.</p>
@@ -687,7 +688,7 @@ footer a:hover { color: #fff; }
 </section>
 
 <!-- DIFERENCIAIS -->
-<section class="s s-blue" id="diferenciais">
+<section class="s s-blue s-center" id="diferenciais">
   <div class="eyebrow">Tecnologia exclusiva</div>
   <h2>Tecnologia que te dá<br>tempo de volta.</h2>
   <p class="s-desc">Cada funcionalidade foi criada para eliminar trabalho manual da sua rotina. Menos horas na tela, mais tempo no que importa.</p>
